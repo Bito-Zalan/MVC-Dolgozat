@@ -5,14 +5,15 @@ export default class Kartyak{
     szuloElem;
     #MODELL;
     #LISTA = []
+    darabTartalom;
 
 
-    constructor(lista,szuloElem){
+    constructor(szuloElem, lista){
         this.szuloElem = szuloElem;
+        this.#MODELL = new Model();
         this.#LISTA = lista;
         this.darabTartalom = $(".darabszam");
-        this.#MODELL = new Model;
-        this.setDarab();
+        /* this.szuloElem.append(this.#MODELL.getDb()) */
         this.kartyakKiIr();
     }
 
@@ -22,7 +23,7 @@ export default class Kartyak{
 
     kartyakKiIr(){
         this.#LISTA.forEach((elem) => {
-            new Kartya(elem, this.szuloElem);
+            new Kartya(elem,this.szuloElem);
         });
     }
 }

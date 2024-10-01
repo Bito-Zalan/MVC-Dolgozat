@@ -1,17 +1,12 @@
 
 export default class Model{
     #LISTA = [];
-    #DBLISTA = []
     db;
 
-    constructor(lista,db){
+    constructor(lista){
         this.#LISTA = lista;
-        this.db = db;
+        this.db = 0;
         
-    }
-
-    listaFeltolt(){
-        this.#LISTA.push()
     }
 
     getListaAdat(){
@@ -22,8 +17,8 @@ export default class Model{
         return this.db;
     }
 
-    dbNoveles(db){
-        this.#DBLISTA.push(db);
+    dbNoveles(){
+        this.db++;
         return this.db;
     }
 
