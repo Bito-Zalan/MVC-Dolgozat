@@ -15,14 +15,14 @@ header{
 
 .card {
     transition: transform 0.3s;
-    height: 200px;
+    height: 180px;
 }
 
 .card:hover {
     transform: scale(1.05); 
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
     .kartyak{
       display: grid;
       grid-template-columns: repeat(3,1fr);
