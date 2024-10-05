@@ -9,6 +9,7 @@ const motivationalQuotes = [
     "Az álmaid határozzák meg, hová jutsz el, a munkád pedig azt, hogyan érsz oda.",
     
     "A legnagyobb győzelmek mindig a legnehezebb küzdelmek után jönnek.",
+    
     "Ne várj a tökéletes pillanatra, hanem tedd azzá a pillanatot.",
     "A változás mindig félelmetes, de nélküle nincs fejlődés.",
     "Bízz magadban, mert képes vagy bármire, amire igazán vágysz.",

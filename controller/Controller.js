@@ -7,14 +7,15 @@ export default class Controller{
     constructor(){
         this.kartyakElem = $(".kartyak")
         this.modell = new Model(IDEZETEK);
-        new Kartyak(this.modell.getListaAdat(),this.modell.getDb(), this.kartyakElem)
+        this.kartyakView = new Kartyak(this.kartyakElem,this.modell.getListaAdat());
         this.esemenyKezelo();
     }
 
     esemenyKezelo(){
         $(window).on("kivalaszt", (event)=>{
-            this.dbElem = $(".darabszam");
             this.modell.dbNoveles();
+            this.kartyakView.setDarab(this.modell.getDb());
+            this.kartyakView.frissitDarabSzam();
         });
     }
 }

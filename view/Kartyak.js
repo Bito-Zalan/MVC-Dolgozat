@@ -1,24 +1,24 @@
-import Model from "../modell/Model.js";
 import Kartya from "./Kartya.js";
 
 export default class Kartyak{
     szuloElem;
-    #MODELL;
     #LISTA = []
     darabTartalom;
 
 
     constructor(szuloElem, lista){
         this.szuloElem = szuloElem;
-        this.#MODELL = new Model();
         this.#LISTA = lista;
         this.darabTartalom = $(".darabszam");
-        /* this.szuloElem.append(this.#MODELL.getDb()) */
         this.kartyakKiIr();
     }
 
-    setDarab(){
-        this.#MODELL.getDb();
+    setDarab(ujErtek){
+        this.darab = ujErtek;
+    }
+
+    frissitDarabSzam(){
+        this.darabTartalom.text(`Megfordított idézetek száma: ${this.darab}`);
     }
 
     kartyakKiIr(){
